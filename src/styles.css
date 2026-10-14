@@ -163,6 +163,19 @@
   line-height: 1.5;
 }
 
+.field-line {
+  min-height: 2.75rem;
+  resize: none;
+}
+
+.hp {
+  position: absolute;
+  left: -9999px;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
 .field::placeholder {
   color: var(--color-muted);
 }

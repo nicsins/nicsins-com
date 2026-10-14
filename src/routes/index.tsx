@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { ContactForm } from "@/components/contact-form";
 import { SiteReel } from "@/components/site-reel";
 import { SunoDeck } from "@/components/suno-deck";
 import { eras, goals, partners } from "@/lib/content";
@@ -161,6 +162,7 @@ function Home() {
             A cooperative that needs to become a thing, a form someone cannot finish alone, or a
             system that is lying about itself. Minneapolis.
           </p>
+          <ContactForm />
         </div>
       </section>
     </>
