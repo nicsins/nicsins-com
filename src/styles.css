@@ -176,6 +176,10 @@
   overflow: hidden;
 }
 
+.field[aria-invalid="true"] {
+  border-color: var(--color-primary);
+}
+
 .field::placeholder {
   color: var(--color-muted);
 }
