@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0e0f0c;
-  --color-surface: #171915;
-  --color-fg: #f3ecdf;
-  --color-muted: #b4ad9f;
-  --color-primary: #e4a21a;
+  --color-bg: #0c100e;
+  --color-surface: #141a16;
+  --color-fg: #f4efe4;
+  --color-muted: #b7b0a2;
+  --color-primary: #e6b325;
+  --color-leaf: #2fbf6a;
+  --color-flare: #e23b3b;
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Instrument Serif", ui-serif, Georgia, "Times New Roman", serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -71,12 +73,14 @@
 .tiger-rail {
   background-image: repeating-linear-gradient(
     -32deg,
-    var(--color-primary) 0 7px,
-    var(--color-bg) 7px 12px,
-    color-mix(in srgb, var(--color-primary) 42%, var(--color-bg)) 12px 18px,
-    var(--color-bg) 18px 28px
+    var(--color-flare) 0 6px,
+    var(--color-bg) 6px 11px,
+    var(--color-primary) 11px 17px,
+    var(--color-bg) 17px 22px,
+    var(--color-leaf) 22px 28px,
+    var(--color-bg) 28px 40px
   );
-  background-size: 28px 56px;
+  background-size: 40px 80px;
   animation: stripe-drift 18s linear infinite;
 }
 
@@ -100,6 +104,31 @@
     width: 0.7rem;
     z-index: 50;
   }
+}
+
+.hero-glow {
+  background:
+    radial-gradient(ellipse 42% 55% at 88% 0%, color-mix(in srgb, var(--color-leaf) 26%, transparent), transparent 70%),
+    radial-gradient(ellipse 36% 48% at 0% 100%, color-mix(in srgb, var(--color-primary) 18%, transparent), transparent 68%),
+    radial-gradient(ellipse 22% 30% at 72% 88%, color-mix(in srgb, var(--color-flare) 14%, transparent), transparent 70%);
+}
+
+.wash-gold {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-primary) 10%, transparent), transparent 14rem),
+    var(--color-surface);
+}
+
+.wash-leaf {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-leaf) 9%, transparent), transparent 14rem),
+    var(--color-bg);
+}
+
+.wash-flare {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-flare) 8%, transparent), transparent 14rem),
+    var(--color-bg);
 }
 
 .watermark {
@@ -218,7 +247,7 @@
 
 @keyframes stripe-drift {
   to {
-    background-position: 0 56px;
+    background-position: 0 80px;
   }
 }
 
@@ -281,13 +310,13 @@
   pointer-events: none;
   background: conic-gradient(
     from var(--border-angle),
-    var(--color-primary),
-    #3a2a10 16%,
-    var(--color-fg) 30%,
-    var(--color-primary) 46%,
-    #14140f 64%,
-    #c98412 78%,
-    var(--color-primary)
+    var(--color-flare),
+    var(--color-primary) 18%,
+    var(--color-leaf) 38%,
+    #10140f 54%,
+    var(--color-fg) 70%,
+    var(--color-primary) 86%,
+    var(--color-flare)
   );
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
@@ -343,12 +372,18 @@
   background: var(--color-primary);
 }
 
+.window-bar span:nth-child(1) {
+  background: var(--color-flare);
+}
+
 .window-bar span:nth-child(2) {
-  opacity: 0.55;
+  background: var(--color-primary);
+  opacity: 1;
 }
 
 .window-bar span:nth-child(3) {
-  opacity: 0.28;
+  background: var(--color-leaf);
+  opacity: 1;
 }
 
 .window-bar p {

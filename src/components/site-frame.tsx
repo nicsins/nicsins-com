@@ -44,7 +44,7 @@ function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-fg/10 bg-bg">
+    <header className="sticky top-0 z-40 border-b border-fg/10 bg-bg/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 md:px-8">
         <Link to="/" className="flex min-h-11 items-center gap-3">
           <Mark className="size-8 shrink-0" />

@@ -17,7 +17,7 @@ export const Route = createRootRoute({
         content:
           "Nic Beltrante — nicsins. A few goals, the live sites, and a field record. Useful beats impressive.",
       },
-      { name: "theme-color", content: "#0e0f0c" },
+      { name: "theme-color", content: "#0c100e" },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },

@@ -21,17 +21,17 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <>
-      <section className="relative overflow-hidden">
+      <section className="hero-glow relative overflow-hidden">
         <p aria-hidden="true" className="watermark pointer-events-none absolute right-0 bottom-0 font-serif italic text-fg">
           nb
         </p>
         <div className="relative mx-auto max-w-6xl px-5 pt-16 pb-20 md:px-8 md:pt-24 md:pb-28">
           <p className="rise flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-primary">
-            <span className="dot-live inline-block size-1.5 rounded-full bg-primary" aria-hidden="true" />
+            <span className="dot-live inline-block size-1.5 rounded-full bg-leaf" aria-hidden="true" />
             Minneapolis · still learning
           </p>
           <h1 className="rise draw mt-6 max-w-4xl pb-3 font-serif text-5xl leading-none text-fg sm:text-7xl md:text-8xl">
-            A few things worth finishing.
+            A few things worth <em className="text-primary">finishing.</em>
           </h1>
           <p className="rise rise-3 mt-8 max-w-xl text-lg leading-relaxed text-muted">
             I’m Nic Beltrante. I used to collect intelligence for the Army. These days I try to
@@ -49,9 +49,9 @@ function Home() {
         </div>
       </section>
 
-      <section id="listen" className="border-t border-fg/10 bg-surface">
+      <section id="listen" className="wash-gold border-t border-fg/10">
         <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
-          <p className="font-mono text-xs uppercase tracking-widest text-primary">Listen</p>
+          <p className="font-mono text-xs uppercase tracking-widest text-primary">01 · Listen</p>
           <h2 className="mt-4 max-w-3xl font-serif text-4xl leading-none md:text-6xl">
             Two songs. Press one.
           </h2>
@@ -63,9 +63,9 @@ function Home() {
         </div>
       </section>
 
-      <section id="goals" className="border-t border-fg/10">
+      <section id="goals" className="wash-leaf border-t border-fg/10">
         <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
-          <p className="font-mono text-xs uppercase tracking-widest text-primary">Goals</p>
+          <p className="font-mono text-xs uppercase tracking-widest text-leaf">02 · Goals</p>
           <h2 className="mt-4 max-w-3xl font-serif text-4xl leading-none md:text-6xl">
             What we’re aiming at.
           </h2>
@@ -91,9 +91,9 @@ function Home() {
         </div>
       </section>
 
-      <section id="live" className="border-t border-fg/10">
+      <section id="live" className="wash-flare border-t border-fg/10">
         <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
-          <p className="font-mono text-xs uppercase tracking-widest text-primary">Sites</p>
+          <p className="font-mono text-xs uppercase tracking-widest text-flare">03 · Sites</p>
           <h2 className="mt-4 max-w-3xl font-serif text-4xl leading-none md:text-6xl">
             Doors that answered.
           </h2>
@@ -105,9 +105,9 @@ function Home() {
         </div>
       </section>
 
-      <section id="partners" className="border-t border-fg/10 bg-surface">
+      <section id="partners" className="wash-leaf border-t border-fg/10">
         <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
-          <p className="font-mono text-xs uppercase tracking-widest text-primary">Partners</p>
+          <p className="font-mono text-xs uppercase tracking-widest text-leaf">04 · Partners</p>
           <h2 className="mt-4 max-w-3xl font-serif text-4xl leading-none md:text-6xl">
             Kwizzle.
           </h2>
@@ -127,8 +127,9 @@ function Home() {
         </div>
       </section>
 
-      <section id="field" className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
-        <p className="font-mono text-xs uppercase tracking-widest text-primary">Field record</p>
+      <section id="field" className="border-t border-fg/10">
+        <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+          <p className="font-mono text-xs uppercase tracking-widest text-flare">05 · Field record</p>
         <h2 className="mt-4 max-w-3xl font-serif text-4xl leading-none md:text-6xl">
           Where the habit came from.
         </h2>
@@ -144,11 +145,12 @@ function Home() {
             </li>
           ))}
         </ol>
+        </div>
       </section>
 
-      <section id="contact" className="border-t border-fg/10 bg-surface">
+      <section id="contact" className="wash-gold border-t border-fg/10">
         <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
-          <p className="font-mono text-xs uppercase tracking-widest text-primary">Contact</p>
+          <p className="font-mono text-xs uppercase tracking-widest text-primary">06 · Contact</p>
           <h2 className="mt-4 max-w-3xl font-serif text-4xl leading-none md:text-6xl">
             If it is a real problem, write.
           </h2>
