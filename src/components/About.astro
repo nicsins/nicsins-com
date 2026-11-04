@@ -1,0 +1,10 @@
+---
+// Visually secondary: prose width, muted text, h3 subheads. [CONFIRM] items are filtered out.
+import { about } from '../data/about.js';
+const render = (p) => p.filter((s) => !s.confirm).map((s) => s.text).join(' ');
+---
+<section id="about" class="ns-section" aria-labelledby="about-title"><div class="ns-wrap"><div class="ns-about">
+  <p class="ns-eyebrow">About</p><h2 id="about-title" class="ns-h2">{about.title}</h2>
+  {about.intro.map((p) => <p>{render(p)}</p>)}
+  {about.sections.map((s) => (<><h3 class="ns-h3">{s.heading}</h3>{s.paragraphs.map((p) => render(p) && <p>{render(p)}</p>)}</>))}
+</div></div></section>

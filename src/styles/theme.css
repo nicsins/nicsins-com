@@ -3,3 +3,5 @@
 .ns-after-grid{margin-top:var(--ns-6)}
 .ns-contact-wrap{padding:var(--ns-section) var(--ns-gutter)}
 .ns-contact .ns-h2{margin:0}
+.ns-about{max-width:var(--ns-prose);color:var(--ns-muted)}
+.ns-about .ns-h3{margin-top:var(--ns-6);color:var(--ns-text)}
