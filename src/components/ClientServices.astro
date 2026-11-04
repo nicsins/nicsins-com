@@ -1,8 +1,7 @@
 ---
-import Section from './Section.astro'; import Card from './Card.astro';
+import Section from './Section.astro';
 import { services } from '../data/content.js'; import { site } from '../data/site.js';
 ---
-<Section id="services" title="What I build for clients">
-  <div class="card-grid">{services.map((s) => <Card {...s} />)}</div>
-  <p class="links cta"><a href={`mailto:${site.email}`}>Start a project →</a></p>
-</Section>
+<Section id="services" eyebrow="For clients" title="What I build for you"><div class="ns-grid">
+  {services.map((s, i) => <div class="ns-card ns-card--service"><div class="ns-num">{String(i + 1).padStart(2, '0')}</div><h3 class="ns-h3">{s.name}</h3><p>{s.desc}</p></div>)}
+</div><p class="ns-after-grid"><a class="ns-link" href={`mailto:${site.email}`}>Start a project →</a></p></Section>

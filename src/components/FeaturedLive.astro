@@ -1,8 +1,8 @@
 ---
-import Section from './Section.astro'; import Card from './Card.astro';
+import Section from './Section.astro';
 import { featured } from '../data/content.js';
 const host = (u) => u.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
 ---
-<Section id="featured" title="Featured: live">
-  <div class="card-grid">{featured.map((p) => <Card {...p} url={host(p.href)} />)}</div>
-</Section>
+<Section id="featured" eyebrow="Featured · live" title="Systems in production today"><div class="ns-grid">
+  {featured.map((p) => <a class="ns-card ns-card--feature" href={p.href}><span class="ns-badge ns-badge--live">Live</span><h3 class="ns-h3">{p.name}</h3><p>{p.desc}</p><div class="ns-card__meta"><span>{host(p.href)}</span><span>↗</span></div></a>)}
+</div></Section>

@@ -1,1 +1,5 @@
-/* THEME — Game Art Director: final look goes here (loaded after base.css). */
+/* Layout helpers replacing the mockup's inline styles. Tokens only, no new colours. */
+.ns-proof-wrap{padding-bottom:var(--ns-section)}
+.ns-after-grid{margin-top:var(--ns-6)}
+.ns-contact-wrap{padding:var(--ns-section) var(--ns-gutter)}
+.ns-contact .ns-h2{margin:0}

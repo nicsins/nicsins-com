@@ -1,6 +1,6 @@
 ---
 import { results } from '../data/content.js';
 ---
-<section id="results" class="results card-grid" aria-label="Results">
-  {results.map((r) => <div class="card stat"><b class="stat__value">{r.value}</b><span class="card__desc">{r.label}</span></div>)}
-</section>
+<section id="results" class="ns-wrap ns-proof-wrap" aria-label="Results"><div class="ns-proof">
+  {results.map((r) => <div class="ns-stat"><div class="ns-stat__n">{r.value}{r.unit && <small>{r.unit}</small>}</div><div class="ns-stat__l">{r.label}</div><div class="ns-source">{r.source}</div></div>)}
+</div></section>

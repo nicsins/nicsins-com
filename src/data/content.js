@@ -1,8 +1,8 @@
 // All page copy/links. Featured MUST only contain links that pass link-check (HTTP 200).
 export const results = [
-  { value: '41', label: 'paid API endpoints live for AI agents' },
-  { value: '117ms', label: 'median payment challenge, 182ms at the 95th percentile (live probe, Nov 4)' },
-  { value: '0', label: 'API keys needed. Agents pay per call in USDC on Base.' },
+  { value: '41', label: 'Paid API endpoints live for AI agents', source: 'live probe · Nov 3' },
+  { value: '117', unit: 'ms', label: 'Median payment challenge, 182 ms at p95', source: 'live probe · Nov 4' },
+  { value: '0', label: 'API keys needed. Agents pay per call in USDC on Base.', source: 'x402 · USDC on Base' },
 ];
 export const featured = [
   { name: 'Grokzilla', href: 'https://grokzilla.shop', desc: 'Pay-per-call APIs for AI agents. USDC on Base over x402, no API key.' },
@@ -23,7 +23,7 @@ export const openSource = [
 ];
 // auction-omniverse.com (000) and github.com/nicsins/omni-auction (404) failed link-check: no link.
 export const inDevelopment = [
-  { name: 'Zero Breach Guide', tag: 'preview', href: 'https://zero-breach-guide.vercel.app', desc: 'An offline security toolkit with x403 unlock.' },
-  { name: 'Omni-Auction', tag: 'in dev', desc: 'A browser extension and auction site with escrowed bids. The test payment flow works and 658 automated tests pass.' },
-  { name: 'The crew', tag: 'in dev', desc: 'A team of coordinated agents ("Groklettes") that build, monitor, and list services, with a shared knowledge ledger on the way.' },
+  { name: 'Zero Breach Guide', tag: 'Preview', href: 'https://zero-breach-guide.vercel.app', desc: 'An offline security toolkit with x403 unlock.' },
+  { name: 'Omni-Auction', tag: 'In development', desc: 'A browser extension and auction site with escrowed bids. The test payment flow works and 658 automated tests pass.' },
+  { name: 'The crew', tag: 'In development', desc: 'A team of coordinated agents ("Groklettes") that build, monitor, and list services, with a shared knowledge ledger on the way.' },
 ];

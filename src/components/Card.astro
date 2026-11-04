@@ -1,9 +1,0 @@
----
-const { name, desc, href, url, tag, variant } = Astro.props;
-const Tag = href ? 'a' : 'div';
----
-<Tag class:list={['card', variant && `card--${variant}`]} href={href}>
-  <b class="card__title">{name}{tag && <i class="card__tag">{tag}</i>}</b>
-  <span class="card__desc">{desc}</span>
-  {url && <div class="card__url">{url}</div>}
-</Tag>

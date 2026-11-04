@@ -1,9 +1,9 @@
 ---
-import Section from './Section.astro'; import Card from './Card.astro';
+import Section from './Section.astro';
 import { inDevelopment } from '../data/content.js';
 const host = (u) => u.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
 ---
-<Section id="in-development" title="In development" variant="dev">
-  <p class="section__note">Work in progress — previews and unreleased projects, not production.</p>
-  <div class="card-grid">{inDevelopment.map((p) => <Card {...p} variant="dev" url={p.href && host(p.href)} />)}</div>
-</Section>
+<Section id="in-development" eyebrow="In development" title="What's next"><div class="ns-grid">
+  {inDevelopment.map((p) => { const T = p.href ? 'a' : 'div'; return (
+    <T class="ns-card ns-card--dev" href={p.href}><span class="ns-badge ns-badge--dev">{p.tag}</span><h3 class="ns-h3">{p.name}</h3><p>{p.desc}</p>{p.href && <div class="ns-card__meta"><span>{host(p.href)}</span><span>↗</span></div>}</T>); })}
+</div></Section>
