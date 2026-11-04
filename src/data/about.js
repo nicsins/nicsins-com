@@ -10,7 +10,7 @@ export const about = {
   sections: [
     { heading: 'The Army', paragraphs: [
       [
-        { text: 'I was a paratrooper with the 55th [CONFIRM: unit designation] Military Intelligence Brigade, supporting the 82nd and 101st Airborne, the 10th Mountain Division and Joint Special Operations Command.', confirm: true },
+        { text: 'I was a paratrooper with the 525th Military Intelligence Brigade (Airborne), supporting the 82nd and 101st Airborne, the 10th Mountain Division and Joint Special Operations Command.', confirm: false },
         { text: 'I ran interrogation-resistance training at SERE School and worked as a role-player trainer in Special Forces Assessment.' },
       ],
       [
