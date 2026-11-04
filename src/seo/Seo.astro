@@ -1,0 +1,21 @@
+---
+// SEO HOOK — Beacon owns this. Meta, canonical, Open Graph, Twitter.
+import { site } from '../data/site.js';
+const { title = site.title, description = site.description, image = site.ogImage, path = Astro.url.pathname } = Astro.props;
+const canonical = new URL(path, site.url).href;
+const img = new URL(image, site.url).href;
+---
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta name="robots" content={site.indexable ? 'index,follow' : 'noindex'} />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={site.name} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={img} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content={site.twitter} />
+<link rel="sitemap" href="/sitemap.xml" />
+<slot />

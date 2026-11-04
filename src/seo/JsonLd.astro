@@ -1,0 +1,9 @@
+---
+// JSON-LD HOOK — Beacon: extend the default Person schema or pass `data`.
+import { site } from '../data/site.js';
+const data = Astro.props.data ?? {
+  '@context': 'https://schema.org', '@type': 'Person', name: site.name, url: site.url,
+  email: `mailto:${site.email}`, sameAs: Object.values(site.social),
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(data)} />

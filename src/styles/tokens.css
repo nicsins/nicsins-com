@@ -1,0 +1,15 @@
+/* DESIGN TOKENS — Game Art Director owns this file. Placeholder values only; no final look. */
+:root {
+  --color-bg: #0b0d10;
+  --color-surface: #14181d;
+  --color-border: #232a32;
+  --color-text: #e8ecf1;
+  --color-muted: #8b96a3;
+  --color-accent: #5eead4;
+  --color-dev: #fbbf24;
+  --font-body: system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, monospace;
+  --radius-card: 14px;
+  --space-section: 56px;
+  --content-width: 960px;
+}

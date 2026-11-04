@@ -1,0 +1,8 @@
+---
+import { site } from '../data/site.js';
+---
+<header class="hero">
+  <h1 class="hero__title">{site.name}</h1>
+  <p class="hero__sub">{site.description} Live systems and real numbers, not slides.</p>
+  <p class="links"><a href={`mailto:${site.email}`}>Email</a><a href={site.social.github}>GitHub</a><a href={site.social.x}>X</a></p>
+</header>

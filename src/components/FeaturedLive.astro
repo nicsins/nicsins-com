@@ -1,0 +1,8 @@
+---
+import Section from './Section.astro'; import Card from './Card.astro';
+import { featured } from '../data/content.js';
+const host = (u) => u.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+---
+<Section id="featured" title="Featured: live">
+  <div class="card-grid">{featured.map((p) => <Card {...p} url={host(p.href)} />)}</div>
+</Section>

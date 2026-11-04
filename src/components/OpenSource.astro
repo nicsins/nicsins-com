@@ -1,0 +1,7 @@
+---
+import Section from './Section.astro'; import Card from './Card.astro';
+import { openSource } from '../data/content.js';
+---
+<Section id="open-source" title="Open source">
+  <div class="card-grid">{openSource.map((r) => <Card {...r} />)}</div>
+</Section>

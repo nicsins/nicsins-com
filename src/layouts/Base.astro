@@ -1,0 +1,16 @@
+---
+import Seo from '../seo/Seo.astro';
+import JsonLd from '../seo/JsonLd.astro';
+import '../styles/base.css';
+import '../styles/theme.css';
+const { seo = {}, jsonLd } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <Seo {...seo}><slot name="head" /></Seo>
+  <JsonLd data={jsonLd} />
+</head>
+<body><main class="site-main"><slot /></main></body>
+</html>

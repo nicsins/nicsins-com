@@ -1,0 +1,9 @@
+---
+import Section from './Section.astro'; import Card from './Card.astro';
+import { inDevelopment } from '../data/content.js';
+const host = (u) => u.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+---
+<Section id="in-development" title="In development" variant="dev">
+  <p class="section__note">Work in progress — previews and unreleased projects, not production.</p>
+  <div class="card-grid">{inDevelopment.map((p) => <Card {...p} variant="dev" url={p.href && host(p.href)} />)}</div>
+</Section>

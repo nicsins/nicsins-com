@@ -1,0 +1,8 @@
+---
+import Section from './Section.astro'; import Card from './Card.astro';
+import { services } from '../data/content.js'; import { site } from '../data/site.js';
+---
+<Section id="services" title="What I build for clients">
+  <div class="card-grid">{services.map((s) => <Card {...s} />)}</div>
+  <p class="links cta"><a href={`mailto:${site.email}`}>Start a project →</a></p>
+</Section>

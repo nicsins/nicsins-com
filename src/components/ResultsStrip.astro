@@ -1,0 +1,6 @@
+---
+import { results } from '../data/content.js';
+---
+<section id="results" class="results card-grid" aria-label="Results">
+  {results.map((r) => <div class="card stat"><b class="stat__value">{r.value}</b><span class="card__desc">{r.label}</span></div>)}
+</section>
