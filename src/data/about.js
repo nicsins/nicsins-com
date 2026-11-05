@@ -27,16 +27,18 @@ export const about = {
     { heading: 'Building things', paragraphs: [
       [
         { text: 'After the Army, I built things with my hands.' },
-        { text: 'I owned a company that did REO property preservation and renovation for banks.' },
+        { text: 'I owned Buddy Swiss Inc, doing residential property preservation and renovation for Bank of America, Wells Fargo, Chase and other banks.' },
         { text: 'We handled about $[CONFIRM] million in assets a month and completed up to 5 full renovations a month.', confirm: true },
-        { text: 'I rehabbed hotels for major hotel chains as a construction project manager, often coming in under budget.' },
+        { text: 'As co-owner and project manager of North Exposure Construction, I rehabbed hotels for Holiday Inn, La Quinta and Best Western, delivering the commercial carpentry and finish work and running subcontractors for the other trades, often under budget.' },
         { text: 'I did custom build-outs for photography studios whose major client was Target, and I built their sets.' },
       ],
       [
-        { text: 'In Sandstone, Minnesota, there was a distressed, overgrown quarry that had become a haven for meth production.' },
-        { text: 'I brokered a deal with the city: the climbing community would clean it up in exchange for the chance to build the first ice-climbing park in Minnesota.' },
-        { text: 'It has been there about [CONFIRM] years now.', confirm: true },
+        { text: 'As co-owner of Fear This Productions, I partnered with municipal governments on festivals built around untapped local resources, including the Kettle River Paddle Festival and the Sandstone Ice Festival.' },
+        { text: 'In Sandstone, Minnesota, Robinson Quarry had closed and become a haven for unchecked criminal activity.' },
+        { text: 'I brokered a partnership between the City of Sandstone and the Minnesota Climbing Association: the climbing community would clean it up in exchange for building the Sandstone Ice Park, the first ice-climbing park in Minnesota.' },
+        { text: 'It has been running for decades.' },
         { text: 'A town that was losing its people is having a small boom from the campers and climbers who come to the quarry.' },
+        { text: 'Every spring we also promoted bluegrass bands and produced local-artist shows during Art-A-Whirl in Northeast Minneapolis.' },
       ],
     ] },
     { heading: 'The turn', paragraphs: [[
