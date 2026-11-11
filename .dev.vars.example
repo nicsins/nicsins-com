@@ -1,0 +1,20 @@
+# Copy to .dev.vars (gitignored). Fill values locally; never commit secrets.
+# Public marketing site needs none of these to render. Set them only if you
+# are turning sign-in / Neon on, or matching a Vercel env that already has them.
+#
+# DATABASE_URL=
+# BETTER_AUTH_SECRET=
+# BETTER_AUTH_URL=http://127.0.0.1:8081
+# GROK_AUTH_ISSUER=
+# GROK_AUTH_CLIENT_ID=
+# GROK_AUTH_CLIENT_SECRET=
+# GROK_PROJECT_ID=
+# GROK_GATE_ORIGIN=
+# GROK_CONNECTORS_URL=
+# GROK_CONNECTOR_ACCESS_TOKEN=
+# VITE_PUBLIC_HOSTNAME=
+# VITE_STUN_URLS=
+#
+# VITE_AUTH_ENABLED is a BUILD-TIME flag (inlined by Vite). Set it in the
+# environment of `npm run build`, not only here, if you need it to change.
+# VITE_AUTH_ENABLED=false
