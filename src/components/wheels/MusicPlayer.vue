@@ -1,7 +1,9 @@
 <script setup>
 /**
  * Port of nicsins/nicsins-com SunoDeck + self-hosted HTMLAudio playback.
- * Suno tracks: embed iframe (progress/EQ decorative).
+ * Default bed (background: true): official Suno video_url AAC/mp4 streams,
+ * started on first user gesture, looping, honoring ns-music-muted.
+ * Other Suno tracks without src: embed iframe (progress/EQ decorative).
  * Self-hosted tracks (src): real progress, seek, Web Audio Analyser EQ.
  */
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
@@ -18,6 +20,9 @@ const activeId = ref(null)
 const reduce = ref(false)
 const playing = ref(false)
 const muted = ref(false)
+const hasGestured = ref(false)
+let autoStarted = false
+let removeGestureListeners = () => {}
 const currentTime = ref(0)
 const duration = ref(0)
 const progressPct = ref(0)
@@ -34,7 +39,35 @@ let freqData = null
 const active = computed(() => props.tracks.find((t) => t.id === activeId.value) || null)
 const activeIndex = computed(() => props.tracks.findIndex((t) => t.id === activeId.value))
 const isSelfHosted = computed(() => Boolean(active.value?.src))
-const isSuno = computed(() => Boolean(active.value?.embedUrl))
+const isSuno = computed(() => Boolean(active.value?.embedUrl) && !active.value?.src)
+const isSunoStream = computed(() => Boolean(active.value?.src && (active.value?.songUrl || active.value?.embedUrl)))
+
+function isBackground(track) {
+  return Boolean(track?.background)
+}
+function backgroundTracks() {
+  return props.tracks.filter(isBackground)
+}
+
+async function tryStartBed() {
+  if (autoStarted) return
+  if (!hasGestured.value || muted.value) return
+  if (activeId.value && !isBackground(active.value)) return
+  const bed = backgroundTracks()
+  if (!bed[0]) return
+  if (!activeId.value) activeId.value = bed[0].id
+  const ok = await playSelf()
+  if (ok) autoStarted = true
+}
+
+function onFirstGesture(evt) {
+  hasGestured.value = true
+  const t = evt.target
+  if (t && t.closest && t.closest('.mp__play, .mp__track, .mp__mute, .mp__ctrl')) {
+    return
+  }
+  tryStartBed()
+}
 
 function formatTime(sec) {
   if (!Number.isFinite(sec) || sec < 0) return '0:00'
@@ -59,6 +92,7 @@ function applyMute() {
 function toggleMute() {
   muted.value = !muted.value
   applyMute()
+  if (!muted.value) tryStartBed()
 }
 
 function ensureAudioGraph(el) {
@@ -130,6 +164,13 @@ function onLoadedMeta() {
 function onEnded() {
   playing.value = false
   stopEqLoop()
+  const bed = backgroundTracks()
+  if (isBackground(active.value) && bed.length) {
+    const i = bed.findIndex((t) => t.id === activeId.value)
+    const nextBed = bed[(i + 1) % bed.length]
+    if (nextBed) select(nextBed.id)
+    return
+  }
   next()
 }
 
@@ -147,7 +188,7 @@ function pauseSelf() {
 async function playSelf() {
   const el = audioEl.value
   const track = active.value
-  if (!el || !track?.src) return
+  if (!el || !track?.src) return false
   if (el.getAttribute('data-src') !== track.src) {
     el.src = track.src
     el.setAttribute('data-src', track.src)
@@ -161,8 +202,10 @@ async function playSelf() {
       stopEqLoop()
       rafId = requestAnimationFrame(tickEq)
     }
+    return true
   } catch {
     playing.value = false
+    return false
   }
 }
 
@@ -174,6 +217,8 @@ function select(id) {
     currentTime.value = 0
     progressPct.value = 0
   }
+  autoStarted = true
+  hasGestured.value = true
   activeId.value = id
   expanded.value = true
   nextTick(() => {
@@ -204,6 +249,12 @@ function toggleExpand() {
 
 function togglePlay() {
   if (!active.value) {
+    hasGestured.value = true
+    const first = backgroundTracks()[0] || props.tracks[0]
+    if (first) {
+      select(first.id)
+      return
+    }
     toggleExpand()
     return
   }
@@ -259,9 +310,16 @@ onMounted(() => {
     muted.value = localStorage.getItem(MUTE_KEY) === '1'
   } catch { /* ignore */ }
   applyMute()
+  const types = ['pointerdown', 'keydown', 'touchstart']
+  const opts = { capture: true, passive: true }
+  types.forEach((t) => window.addEventListener(t, onFirstGesture, opts))
+  removeGestureListeners = () => {
+    types.forEach((t) => window.removeEventListener(t, onFirstGesture, opts))
+  }
 })
 
 onBeforeUnmount(() => {
+  removeGestureListeners()
   pauseSelf()
   stopEqLoop()
   if (audioCtx) {
@@ -273,7 +331,7 @@ onBeforeUnmount(() => {
 })
 
 watch(() => props.tracks, (list) => {
-  if (list.length && !activeId.value) activeId.value = null
+  if (list.length) tryStartBed()
 })
 </script>
 
@@ -394,7 +452,7 @@ watch(() => props.tracks, (list) => {
           <span class="mp__track-text">
             <span class="mp__track-time">{{ track.time }}</span>
             <span class="mp__track-title">{{ track.title }}</span>
-            <span class="mp__track-style">{{ track.style }}{{ track.src ? ' · local' : ' · Suno' }}</span>
+            <span class="mp__track-style">{{ track.style }}{{ track.songUrl || track.embedUrl ? ' · Suno' : ' · local' }}</span>
           </span>
         </button>
       </div>
@@ -431,7 +489,11 @@ watch(() => props.tracks, (list) => {
               </div>
             </div>
           </div>
-          <p class="mp__foot">
+          <p class="mp__foot" v-if="isSunoStream">
+            <span>Played from Suno. nicsins.</span>
+            <a :href="active.songUrl || active.embedUrl" target="_blank" rel="noopener noreferrer">Open the song ↗</a>
+          </p>
+          <p class="mp__foot" v-else>
             <span>Self-hosted · Grok-made · nicsins.</span>
             <a :href="active.src" download>Download ↗</a>
           </p>
@@ -440,9 +502,9 @@ watch(() => props.tracks, (list) => {
       </div>
 
       <p class="mp__credit">
-        Two tracks play from
+        The first three tracks are the default instrumental bed from
         <a :href="profile" target="_blank" rel="noopener noreferrer">suno.com/@nicsins</a>.
-        The others are self-hosted.
+        They start on your first click and loop unless you pick another title.
       </p>
     </div>
   </aside>
