@@ -1,0 +1,22 @@
+---
+import { site } from '../data/site.js';
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const links = [
+  { href: '/#sites', label: 'Sites', on: path === '/' },
+  { href: '/sites', label: 'Every site', on: path === '/sites' },
+  { href: '/#about', label: 'About', on: false },
+  { href: '/creator-of-all', label: 'Notes', on: path === '/creator-of-all' },
+  { href: '/#contact', label: 'Contact', on: false },
+];
+---
+<a class="ns-skip" href="#main">Skip to content</a>
+<nav class="ns-nav" aria-label="Primary">
+  <div class="ns-wrap ns-nav__inner">
+    <a class="ns-nav__brand" href="/">{site.name}</a>
+    <ul class="ns-nav__links">
+      {links.map((l) => (
+        <li><a href={l.href} aria-current={l.on ? 'page' : undefined}>{l.label}</a></li>
+      ))}
+    </ul>
+  </div>
+</nav>

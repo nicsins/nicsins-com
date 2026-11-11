@@ -1,0 +1,163 @@
+{
+  "_source": "Curated showcase only. Every candidate was screenshotted at 1280x800 and 390x844 on 2026-11-11. Works in progress live in src/data/workshop.js, not here.",
+  "categories": [
+    {
+      "id": "play",
+      "label": "Play",
+      "sites": [
+        {
+          "id": "neon-plaza",
+          "name": "Neon Plaza",
+          "href": "https://dragon-and-panda.vercel.app",
+          "host": "dragon-and-panda.vercel.app",
+          "desc": "Be a dragon or a panda. Walk the plaza.",
+          "status": "live",
+          "frame": "nicsins",
+          "thumb": "/windows/dragon-and-panda.vercel.app.jpg"
+        },
+        {
+          "id": "burning-man",
+          "name": "Burning Man",
+          "href": "https://cyberpunk-burning-man.vercel.app",
+          "host": "cyberpunk-burning-man.vercel.app",
+          "desc": "The playa at night. Free roam, the Man, neon.",
+          "status": "live",
+          "frame": "open",
+          "thumb": "/windows/cyberpunk-burning-man.vercel.app.jpg"
+        }
+      ]
+    },
+    {
+      "id": "shop",
+      "label": "Shop",
+      "sites": [
+        {
+          "id": "grokzilla",
+          "name": "Grokzilla Shop",
+          "href": "https://grokzilla.shop",
+          "host": "grokzilla.shop",
+          "desc": "Small agent skills. Pay for the step, not the speech.",
+          "status": "live",
+          "frame": "open",
+          "thumb": "/windows/grokzilla.shop.jpg",
+          "customDomain": true
+        },
+        {
+          "id": "micro-pay",
+          "name": "Micro Pay",
+          "href": "https://x402-micro-pay.com",
+          "host": "x402-micro-pay.com",
+          "desc": "The pay desk beside the shop.",
+          "status": "live",
+          "frame": "open",
+          "thumb": "/windows/x402-micro-pay.com.jpg",
+          "customDomain": true
+        },
+        {
+          "id": "harbinger",
+          "name": "Harbinger",
+          "href": "https://www.x403-harbinger.com",
+          "host": "x403-harbinger.com",
+          "desc": "A morning note. Grants, flags, what changed.",
+          "status": "live",
+          "frame": "nicsins",
+          "thumb": "/windows/x403-harbinger.com.jpg",
+          "customDomain": true
+        }
+      ]
+    },
+    {
+      "id": "tool",
+      "label": "Tool",
+      "sites": [
+        {
+          "id": "nicje",
+          "name": "NICJE",
+          "href": "https://x402-micro-pay.com/nicje",
+          "host": "x402-micro-pay.com/nicje",
+          "desc": "Messy data in. Something an agent can use out.",
+          "status": "live",
+          "frame": "open",
+          "thumb": "/windows/nicje-x402.vercel.app.jpg",
+          "customDomain": true
+        },
+        {
+          "id": "omega-utopia",
+          "name": "Omega Utopia",
+          "href": "https://omega-utopia.vercel.app",
+          "host": "omega-utopia.vercel.app",
+          "desc": "A longer sketch of the world the other tools are for.",
+          "status": "live",
+          "frame": "open",
+          "thumb": "/windows/omega-utopia.vercel.app.jpg"
+        }
+      ]
+    },
+    {
+      "id": "partner",
+      "label": "Partner · Kwizzle",
+      "sites": [
+        {
+          "id": "kwizzle",
+          "name": "Kwizzle",
+          "href": "https://keith-kwizz-sovereign-forge.vercel.app",
+          "host": "keith-kwizz-sovereign-forge.vercel.app",
+          "desc": "Keith “Kwizz” Severson. His own front door. Local AI Integrations.",
+          "status": "live",
+          "frame": "open",
+          "thumb": "/windows/keith-kwizz-sovereign-forge.vercel.app.jpg"
+        },
+        {
+          "id": "x402-mcp",
+          "name": "x402 MCP",
+          "href": "https://x402-mcp.onrender.com",
+          "host": "x402-mcp.onrender.com",
+          "desc": "Micropayments and agent discovery on Base.",
+          "status": "live",
+          "frame": "open",
+          "thumb": "/windows/x402-mcp.onrender.com.jpg"
+        },
+        {
+          "id": "a2a-oracle",
+          "name": "A2A Oracle",
+          "href": "https://a2a-x402-oracle.vercel.app",
+          "host": "a2a-x402-oracle.vercel.app",
+          "desc": "Counsel for agent-to-agent commerce. People subscribe. Agents pay.",
+          "status": "live",
+          "frame": "deny",
+          "thumb": "/windows/a2a-x402-oracle.vercel.app.jpg"
+        },
+        {
+          "id": "x402-oracle",
+          "name": "x402 Oracle",
+          "href": "https://x402orcle.vercel.app",
+          "host": "x402orcle.vercel.app",
+          "desc": "A paid wisdom market. 402 is how you ask.",
+          "status": "live",
+          "frame": "open",
+          "thumb": "/windows/x402orcle.vercel.app.jpg"
+        },
+        {
+          "id": "alpha-sentinel",
+          "name": "Alpha Sentinel",
+          "href": "https://alpha-sentinel-mcp.vercel.app",
+          "host": "alpha-sentinel-mcp.vercel.app",
+          "desc": "Market intelligence, paid on-chain.",
+          "status": "live",
+          "frame": "deny",
+          "thumb": "/windows/alpha-sentinel-mcp.vercel.app.jpg"
+        },
+        {
+          "id": "crediting-swarm",
+          "name": "Crediting swarm",
+          "href": "https://x402-crediting-swarm.vercel.app",
+          "host": "x402-crediting-swarm.vercel.app",
+          "desc": "Credit where the work went.",
+          "status": "live",
+          "frame": "open",
+          "thumb": "/windows/x402-crediting-swarm.vercel.app.jpg"
+        }
+      ]
+    }
+  ]
+}

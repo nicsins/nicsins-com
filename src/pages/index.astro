@@ -3,15 +3,25 @@ import Base from '../layouts/Base.astro';
 import Hero from '../components/Hero.astro';
 import ResultsStrip from '../components/ResultsStrip.astro';
 import FeaturedLive from '../components/FeaturedLive.astro';
+import Sites from '../components/Sites.astro';
 import ClientServices from '../components/ClientServices.astro';
 import OpenSource from '../components/OpenSource.astro';
-import InDevelopment from '../components/InDevelopment.astro';
+import Goals from '../components/Goals.astro';
 import About from '../components/About.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 ---
 <Base>
   <Hero />
-  <main><ResultsStrip /><FeaturedLive /><ClientServices /><OpenSource /><InDevelopment /><About /><Contact /></main>
+  <main id="main">
+    <ResultsStrip />
+    <FeaturedLive />
+    <Sites page="home" />
+    <ClientServices />
+    <OpenSource />
+    <Goals />
+    <About />
+    <Contact />
+  </main>
   <Footer />
 </Base>

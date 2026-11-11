@@ -1,0 +1,194 @@
+{
+  "base": "https://nicsins-com-next.nicsins.workers.dev",
+  "results": [
+    {
+      "path": "/",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/",
+      "status": 200,
+      "ok": true,
+      "error": null,
+      "ct": "text/html",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/"
+    },
+    {
+      "path": "/sites",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/sites",
+      "status": 200,
+      "ok": true,
+      "error": null,
+      "ct": "text/html",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/sites/"
+    },
+    {
+      "path": "/sites/",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/sites/",
+      "status": 200,
+      "ok": true,
+      "error": null,
+      "ct": "text/html",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/sites/"
+    },
+    {
+      "path": "/creator-of-all",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/creator-of-all",
+      "status": 200,
+      "ok": true,
+      "error": null,
+      "ct": "text/html",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/creator-of-all/"
+    },
+    {
+      "path": "/about",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/about",
+      "status": 404,
+      "ok": true,
+      "error": null,
+      "ct": "text/html",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/about",
+      "expected_404": true
+    },
+    {
+      "path": "/robots.txt",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/robots.txt",
+      "status": 200,
+      "ok": true,
+      "error": null,
+      "ct": "text/plain",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/robots.txt"
+    },
+    {
+      "path": "/sitemap.xml",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/sitemap.xml",
+      "status": 200,
+      "ok": true,
+      "error": null,
+      "ct": "application/xml",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/sitemap.xml"
+    },
+    {
+      "path": "/llms.txt",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/llms.txt",
+      "status": 200,
+      "ok": true,
+      "error": null,
+      "ct": "text/plain",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/llms.txt"
+    },
+    {
+      "path": "/.well-known/security.txt",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/.well-known/security.txt",
+      "status": 200,
+      "ok": true,
+      "error": null,
+      "ct": "text/plain",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/.well-known/security.txt"
+    },
+    {
+      "path": "/favicon.svg",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/favicon.svg",
+      "status": 200,
+      "ok": true,
+      "error": null,
+      "ct": "image/svg+xml",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/favicon.svg"
+    },
+    {
+      "path": "/og-1200x630.png",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/og-1200x630.png",
+      "status": 200,
+      "ok": true,
+      "error": null,
+      "ct": "image/png",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/og-1200x630.png"
+    },
+    {
+      "path": "/hero-a-network.webp",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/hero-a-network.webp",
+      "status": 200,
+      "ok": true,
+      "error": null,
+      "ct": "image/webp",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/hero-a-network.webp"
+    },
+    {
+      "path": "/sites.json",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/sites.json",
+      "status": 200,
+      "ok": true,
+      "error": null,
+      "ct": "application/json",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/sites.json"
+    },
+    {
+      "path": "/playlist.json",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/playlist.json",
+      "status": 200,
+      "ok": true,
+      "error": null,
+      "ct": "application/json",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/playlist.json"
+    },
+    {
+      "path": "/covers/grokzilla.jpg",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/covers/grokzilla.jpg",
+      "status": 200,
+      "ok": true,
+      "error": null,
+      "ct": "image/jpeg",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/covers/grokzilla.jpg"
+    },
+    {
+      "path": "/music/bajo-oscuro.mp3",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/music/bajo-oscuro.mp3",
+      "status": 200,
+      "ok": true,
+      "error": null,
+      "ct": "audio/mpeg",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/music/bajo-oscuro.mp3"
+    },
+    {
+      "path": "/cards/place.jpg",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/cards/place.jpg",
+      "status": 200,
+      "ok": true,
+      "error": null,
+      "ct": "image/jpeg",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/cards/place.jpg"
+    },
+    {
+      "path": "/windows/grokzilla.shop.jpg",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/windows/grokzilla.shop.jpg",
+      "status": 200,
+      "ok": true,
+      "error": null,
+      "ct": "image/jpeg",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/windows/grokzilla.shop.jpg"
+    },
+    {
+      "path": "/404",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/404",
+      "status": 200,
+      "ok": false,
+      "error": null,
+      "ct": "text/html",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/404",
+      "expected_404": true
+    },
+    {
+      "path": "/no-such-page",
+      "url": "https://nicsins-com-next.nicsins.workers.dev/no-such-page",
+      "status": 404,
+      "ok": true,
+      "error": null,
+      "ct": "text/html",
+      "final": "https://nicsins-com-next.nicsins.workers.dev/no-such-page",
+      "expected_404": true
+    }
+  ],
+  "console": {
+    "home": [],
+    "sites": [],
+    "about": [],
+    "creator": []
+  }
+}

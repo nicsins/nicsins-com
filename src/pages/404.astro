@@ -1,0 +1,19 @@
+---
+import Base from '../layouts/Base.astro';
+import Footer from '../components/Footer.astro';
+const seo = { title: 'Not found — nicsins', path: '/404', noindex: true };
+---
+<Base seo={seo}>
+  <main id="main" class="ns-hero ns-hero--page">
+    <div class="ns-wrap">
+      <p class="ns-eyebrow">404</p>
+      <h1 class="ns-h1">This page is not here.</h1>
+      <p class="ns-lead">The address does not match a page on this site.</p>
+      <div class="ns-actions">
+        <a class="ns-btn ns-btn--primary" href="/">Back home</a>
+        <a class="ns-btn ns-btn--ghost" href="/sites">Every site</a>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Base>

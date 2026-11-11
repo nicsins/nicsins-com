@@ -1,0 +1,19 @@
+---
+import Section from './Section.astro';
+import SitesBoard from './wheels/SitesBoard.vue';
+import InTheWorkshop from './InTheWorkshop.astro';
+const { page = 'home' } = Astro.props;
+const title = page === 'sites' ? 'Every door that earned a place.' : 'Connected sites.';
+const lead = page === 'sites'
+  ? 'Games, the shop, and the tools that load cleanly, look finished, and work end to end. Works in progress live in the workshop at the bottom, collapsed, and are labeled as such.'
+  : 'Each wheel is a category of finished work. Click a site to open a preview, or the corner icon to jump to the real host. Unfinished work is in the workshop below, not mixed in here.';
+---
+<Section id="sites" eyebrow="Sites · showcase" title={title}>
+  <p class="ns-lead ns-sites-lead">{lead}</p>
+</Section>
+<div class="ns-sites-stage">
+  <div class="ns-wrap">
+    <SitesBoard client:load compact={page === 'home'} />
+  </div>
+</div>
+<InTheWorkshop />

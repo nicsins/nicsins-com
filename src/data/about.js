@@ -1,5 +1,6 @@
-// About copy, verbatim from /workspace/nic-brand/BIO.md.
-// Items with `confirm: true` are HIDDEN from the render until Nic confirms them.
+// About copy, verbatim from /workspace/nic-brand/BIO.md, plus already-public
+// field-record details from the live site (Library of Congress, unit citation,
+// medals, cybersecurity era). Items with `confirm: true` are HIDDEN until Nic confirms.
 // To publish one: fill in the [CONFIRM] value and delete `confirm: true`.
 export const about = {
   title: 'About Nic',
@@ -18,8 +19,11 @@ export const about = {
         { text: 'I translated for Secretary of Defense William Perry and the Minister of Defense of the Russian Federation, and for multiple Russian delegation envoys in the U.S.' },
       ],
       [
-        { text: 'In Operation Uphold Democracy in Haiti, I helped shut down the resistance in under 7 hours.' },
+        { text: 'In Operation Uphold Democracy in Haiti, I was part of a small, innovative HUMINT team that shut down the insurgency in under 72 hours. We pushed the limits of modern human-intelligence collection without ever crossing the legal and ethical lines that set our country apart from its adversaries.' },
         { text: "I was the first person to send a data burst over SINCGARS, the Army's frequency-hopping encrypted radio." },
+        { text: 'I was a 97E, a human-intelligence collector. The work was people, and writing it down so the next person did not have to learn it the hard way.' },
+        { text: 'The methods we built became doctrine for the collectors who came after us. Reports from that tour went to the Library of Congress, and our unit received the Joint Meritorious Unit Award. We were recognized as the first HUMINT element to turn out highly effective intelligence in record time, saving lives on all sides and earning a reputation for getting the truth without ever resorting to methods banned under international law.' },
+        { text: 'I received a Humanitarian Service Medal, an Army Commendation Medal, two Army Achievement Medals, and an Armed Forces Expeditionary Medal.' },
         { text: 'Later I worked with a Psychological Operations reserve unit in Minneapolis on all aspects of training and analysis support.' },
         { text: '[CONFIRM: years of service]', confirm: true },
       ],
@@ -41,10 +45,14 @@ export const about = {
         { text: 'Every spring we also promoted bluegrass bands and produced local-artist shows during Art-A-Whirl in Northeast Minneapolis.' },
       ],
     ] },
+    { heading: 'After the uniform', paragraphs: [[
+      { text: 'The years after the uniform went into cybersecurity. Penetration testing, secure review, zero trust, cryptography, threat modeling, forensics.' },
+      { text: 'The question stayed small: where is the truth of this system, and who gets hurt if we miss it.' },
+    ]] },
     { heading: 'The turn', paragraphs: [[
       { text: 'Then I hurt my back, made a change, and fell in love with tech.' },
       { text: 'The same instincts carried over: find the signal, build what works, and leave things better than I found them.' },
-      { text: 'Golden Rule is the operating system.' },
+      { text: 'Golden Rule is the operating system. Minneapolis. I would rather be useful than impressive.' },
     ]] },
   ],
 };

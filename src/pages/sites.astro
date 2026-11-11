@@ -1,0 +1,19 @@
+---
+import Base from '../layouts/Base.astro';
+import Sites from '../components/Sites.astro';
+import OpenSource from '../components/OpenSource.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../data/site.js';
+const seo = {
+  title: 'Sites — nicsins',
+  description: 'Finished nicsins sites that load cleanly and work end to end — games, the shop, and small tools. Works in progress are listed separately.',
+  path: '/sites',
+};
+---
+<Base seo={seo}>
+  <main id="main">
+    <Sites page="sites" />
+    <OpenSource />
+  </main>
+  <Footer />
+</Base>

@@ -1,0 +1,108 @@
+{
+  "_source": "Default bed: two Nic Suno tracks (share links OOIhXO5VUIx4XkEq, MJRfZLpPKjCFrSQ2), played from official Suno video_url AAC/mp4 streams (audio_url is forbidden; m4a-opus media_urls are not valid containers). Then existing Suno embeds (Grokzilla, New Gen Rise) and six self-hosted Grok-made tracks.",
+  "profile": "https://suno.com/@nicsins",
+  "tracks": [
+    {
+      "id": "b2d1b08d-886d-497e-b34d-315d46152e09",
+      "title": "Half-Tension",
+      "style": "Drill · dubstep · trip-hop",
+      "time": "3:08",
+      "image": "https://cdn2.suno.ai/image_b2d1b08d-886d-497e-b34d-315d46152e09.jpeg",
+      "embedUrl": "https://suno.com/embed/b2d1b08d-886d-497e-b34d-315d46152e09",
+      "songUrl": "https://suno.com/song/b2d1b08d-886d-497e-b34d-315d46152e09",
+      "src": "https://cdn1.suno.ai/b2d1b08d-886d-497e-b34d-315d46152e09.mp4",
+      "background": true
+    },
+    {
+      "id": "be051e73-3a3c-4439-838f-ffe27e2d2058",
+      "title": "zydeco alligator shuffle",
+      "style": "Zydeco · dance hall · funeral march",
+      "time": "2:41",
+      "image": "https://cdn2.suno.ai/image_be051e73-3a3c-4439-838f-ffe27e2d2058.jpeg",
+      "embedUrl": "https://suno.com/embed/be051e73-3a3c-4439-838f-ffe27e2d2058",
+      "songUrl": "https://suno.com/song/be051e73-3a3c-4439-838f-ffe27e2d2058",
+      "src": "https://cdn1.suno.ai/be051e73-3a3c-4439-838f-ffe27e2d2058.mp4",
+      "background": true
+    },
+    {
+      "id": "56066409-d2c0-4219-bb07-c65300b5daac",
+      "title": "Grokzilla (Remix)",
+      "style": "Hip hop · west coast · jazz rap",
+      "time": "4:23",
+      "image": "/covers/grokzilla.jpg",
+      "embedUrl": "https://suno.com/embed/56066409-d2c0-4219-bb07-c65300b5daac",
+      "songUrl": "https://suno.com/song/56066409-d2c0-4219-bb07-c65300b5daac",
+      "src": null
+    },
+    {
+      "id": "2ba324de-f808-4f7e-8903-2c5ded7ec6b1",
+      "title": "New Gen Rise (Remastered)",
+      "style": "Zydeco · dancehall · dub",
+      "time": "3:15",
+      "image": "/covers/rise.jpg",
+      "embedUrl": "https://suno.com/embed/2ba324de-f808-4f7e-8903-2c5ded7ec6b1",
+      "songUrl": "https://suno.com/song/2ba324de-f808-4f7e-8903-2c5ded7ec6b1",
+      "src": null
+    },
+    {
+      "id": "bajo-oscuro",
+      "title": "Bajo Oscuro",
+      "style": "Dark bass · latin · night drive",
+      "time": "1:39",
+      "image": "/covers/bajo-oscuro.jpg",
+      "embedUrl": null,
+      "songUrl": null,
+      "src": "/music/bajo-oscuro.mp3"
+    },
+    {
+      "id": "grace-got-me-singing",
+      "title": "Grace Got Me Singing",
+      "style": "Soul · gospel lift · praise",
+      "time": "3:36",
+      "image": "/covers/believe-cover.jpg",
+      "embedUrl": null,
+      "songUrl": null,
+      "src": "/music/grace-got-me-singing.mp3"
+    },
+    {
+      "id": "the-grip",
+      "title": "The Grip",
+      "style": "Trap · grip · heavy pocket",
+      "time": "3:13",
+      "image": "/covers/the-grip.jpg",
+      "embedUrl": null,
+      "songUrl": null,
+      "src": "/music/the-grip.mp3"
+    },
+    {
+      "id": "we-dub-get-steppin",
+      "title": "WE DUB GET STEPPIN (1BODY TALK)",
+      "style": "Dub · dancehall · steppers",
+      "time": "3:47",
+      "image": "/covers/we-dub-get-steppin.jpg",
+      "embedUrl": null,
+      "songUrl": null,
+      "src": "/music/we-dub-get-steppin.mp3"
+    },
+    {
+      "id": "we-take-over",
+      "title": "WE TAKE OVER (Remastered Remix)",
+      "style": "Bass remix · takeover",
+      "time": "4:53",
+      "image": "/covers/we-take-over.jpg",
+      "embedUrl": null,
+      "songUrl": null,
+      "src": "/music/we-take-over.mp3"
+    },
+    {
+      "id": "darkstep-heavy-bass-devilgrass",
+      "title": "Darkstep Heavy Bass Devilgrass",
+      "style": "Darkstep · heavy bass · devilgrass",
+      "time": "0:13",
+      "image": "/covers/darkstep-heavy-bass-devilgrass.jpg",
+      "embedUrl": null,
+      "songUrl": null,
+      "src": "/music/darkstep-heavy-bass-devilgrass.mp3"
+    }
+  ]
+}

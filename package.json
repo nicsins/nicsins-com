@@ -1,1 +1,16 @@
-{"name":"nicsins-com","private":true,"type":"module","scripts":{"dev":"astro dev","build":"astro build","preview":"astro preview"},"dependencies":{"astro":"^5.0.0"}}
+{
+  "name": "nicsins-com",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy:preview": "npm run build && wrangler deploy"
+  },
+  "dependencies": {
+    "@astrojs/vue": "^5.1.4",
+    "astro": "^5.0.0",
+    "vue": "^3.5.45"
+  }
+}

@@ -1,0 +1,31 @@
+---
+import { workshop } from '../data/workshop.js';
+const host = (u) => u ? u.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '') : 'no public URL yet';
+---
+<section id="workshop" class="ns-section ns-workshop" aria-labelledby="workshop-title">
+  <div class="ns-wrap">
+    <details class="ns-workshop__box">
+      <summary class="ns-workshop__summary">
+        <span class="ns-eyebrow" id="workshop-title">In the workshop</span>
+        <span class="ns-workshop__count">{String(workshop.length).padStart(2, '0')} in development</span>
+      </summary>
+      <p class="ns-workshop__lead">These are not finished products. They are listed here so nothing half-built is shown as if it represented the work. No live previews.</p>
+      <ul class="ns-workshop__list">
+        {workshop.map((w) => (
+          <li class="ns-workshop__item">
+            <div class="ns-workshop__head">
+              <span class="ns-badge ns-badge--dev">{w.tag || 'In development'}</span>
+              {w.href ? (
+                <a href={w.href} target="_blank" rel="noopener noreferrer">{w.name}</a>
+              ) : (
+                <span class="ns-workshop__name">{w.name}</span>
+              )}
+            </div>
+            <p class="ns-workshop__desc">{w.desc}</p>
+            <p class="ns-mono ns-workshop__meta">{host(w.href)}{w.why ? ` · ${w.why}` : ''}</p>
+          </li>
+        ))}
+      </ul>
+    </details>
+  </div>
+</section>
