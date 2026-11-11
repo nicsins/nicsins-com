@@ -1,0 +1,49 @@
+---
+const SAMPLE = "A voice agent that walks a veteran through a benefits packet without making it a second job.";
+---
+<div class="ns-walk" data-walk>
+  <form class="ns-walk__form" data-walk-form>
+    <label class="ns-eyebrow" for="intent">Intent</label>
+    <textarea id="intent" name="intent" class="ns-field" maxlength="220" rows="5">{SAMPLE}</textarea>
+    <div class="ns-walk__actions">
+      <button type="submit" class="ns-btn ns-btn--primary">Walk the four stages</button>
+      <p class="ns-walk__note" data-walk-note aria-live="polite">The method, not a model. Your sentence, the contract.</p>
+    </div>
+  </form>
+  <ol class="ns-walk__steps" data-walk-steps></ol>
+</div>
+<script is:inline>
+(function () {
+  const root = document.querySelector("[data-walk]");
+  if (!root) return;
+  const form = root.querySelector("[data-walk-form]");
+  const note = root.querySelector("[data-walk-note]");
+  const list = root.querySelector("[data-walk-steps]");
+  const sample = "A voice agent that walks a veteran through a benefits packet without making it a second job.";
+  function build(intent) {
+    const line = intent.replace(/\s+/g, " ").trim().slice(0, 220);
+    return [
+      { stage: "01", name: "Intent", action: "Done means: " + line, check: "A stranger can point at the finished thing." },
+      { stage: "02", name: "Plan", action: "Cut “" + line + "” into the smallest steps that can fail loudly.", check: "Every step has an input, an action, and a proof." },
+      { stage: "03", name: "Produce", action: "Run the first step where the result actually has to live.", check: "The artifact exists. The check passes. Nothing simulated." },
+      { stage: "04", name: "Evolve", action: "Write down what surprised you while making “" + line + "”.", check: "The next run is shorter, or the skill says why it is not." },
+    ];
+  }
+  function render(steps) {
+    list.innerHTML = steps.map(function (s) {
+      return '<li><p class="ns-num">' + s.stage + " " + s.name + "</p><div><p>" + s.action + '</p><p class="ns-walk__check">Check · ' + s.check + "</p></div></li>";
+    }).join("");
+  }
+  render(build(sample));
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const next = (form.intent.value || "").replace(/\s+/g, " ").trim();
+    if (next.length < 8) {
+      note.textContent = "Name the outcome in one sentence. A short line is enough.";
+      return;
+    }
+    note.textContent = "The method, not a model. Your sentence, the contract.";
+    render(build(next));
+  });
+})();
+</script>

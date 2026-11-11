@@ -1,0 +1,109 @@
+---
+import Base from '../layouts/Base.astro';
+import Footer from '../components/Footer.astro';
+import ProtocolWalk from '../components/ProtocolWalk.astro';
+import { bench, stages } from '../data/content.js';
+const seo = {
+  title: 'Creator of All — nicsins',
+  description: 'A working note by Nic Beltrante. Four stages for finishing a thing, and the bio behind the habit.',
+  path: '/creator-of-all',
+};
+const others = bench.filter((s) => s.id !== 'creator-of-all');
+---
+<Base seo={seo}>
+  <main id="main">
+    <header class="ns-hero ns-hero--page">
+      <div class="ns-wrap">
+        <p class="ns-eyebrow">A working note · not a title</p>
+        <h1 class="ns-h1">Creator of All.</h1>
+        <p class="ns-lead">Just a checklist I use so a project does not die in a chat window. Name the outcome, cut a path, do it where it has to live, write down what surprised you. The name is older than the humility. The humility is the part that matters.</p>
+        <div class="ns-actions">
+          <a class="ns-btn ns-btn--primary" href="#walk">Walk an intent</a>
+          <a class="ns-btn ns-btn--ghost" href="#bio">The bio</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="ns-section" id="bio" aria-labelledby="bio-title">
+      <div class="ns-wrap ns-split">
+        <div>
+          <p class="ns-eyebrow">Bio</p>
+          <h2 id="bio-title" class="ns-h2">Who wrote the note.</h2>
+        </div>
+        <div class="ns-about">
+          <p>I'm Nic Beltrante. On the wire that's nicsins. I build from Minneapolis, and I keep one standing order: treat the person, and the system, the way you want to be treated when you are the one who has to live with the result.</p>
+          <p>In 1994 I was a 97E, a human-intelligence collector with the 525th Military Intelligence Brigade, airborne, in Haiti for Operation Uphold Democracy. The work was people. What they would say, what they would not, and how to write it so the next soldier did not have to learn it the hard way. Those reports went to the Library of Congress. The unit came home with a Meritorious Unit Citation. I came home with a Humanitarian Service Medal, an Army Commendation Medal, two Army Achievement Medals, an Armed Forces Expeditionary Medal, and a habit I never put down. If it matters, write the doctrine.</p>
+          <p>The years after the uniform went into cybersecurity. Penetration testing, secure review, zero trust, cryptography, threat modeling, forensics. Same job, different room. Find the truth of a system before someone else spends the gap.</p>
+          <p>This page is that habit written down. Most "autonomous" setups are a prompt that forgets itself. I wanted a few stages and a requirement that the lesson get written back. It is a note, not a crown. I use it when I would otherwise stop at the plan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="ns-section" aria-labelledby="stages-title">
+      <div class="ns-wrap">
+        <p class="ns-eyebrow">The contract</p>
+        <h2 id="stages-title" class="ns-h2">Four stages. Then you stop and check.</h2>
+        <ol class="ns-goals">
+          {stages.map((s) => (
+            <li class="ns-goal">
+              <img class="ns-goal__img" src={s.image} alt="" width="480" height="300" />
+              <div>
+                <p class="ns-num">{s.index} {s.code}</p>
+                <h3 class="ns-h3">{s.title}</h3>
+                <p>{s.body}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+        <div class="ns-grid ns-use-leave">
+          <div>
+            <h3 class="ns-h3">Use it when</h3>
+            <ul class="ns-plain">
+              <li>The project should still be true next week.</li>
+              <li>The agent has to research, decide, build, and verify.</li>
+              <li>You want the method to improve, not only the artifact.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="ns-h3">Leave it when</h3>
+            <ul class="ns-plain">
+              <li>The answer is one fact and then you are done.</li>
+              <li>Money, safety, or consent needs a human before anything acts.</li>
+              <li>You cannot say what done looks like. Stop and name it.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ns-section" id="walk" aria-labelledby="walk-title">
+      <div class="ns-wrap">
+        <p class="ns-eyebrow">Run</p>
+        <h2 id="walk-title" class="ns-h2">Hand it a sentence.</h2>
+        <p class="ns-lead">This walker does not pretend to be a model. It shows the shape of the protocol with your words in it, so you can see where a real run would have to prove itself.</p>
+        <ProtocolWalk />
+      </div>
+    </section>
+
+    <section class="ns-section" aria-labelledby="bench-title">
+      <div class="ns-wrap">
+        <p class="ns-eyebrow">Beside it</p>
+        <h2 id="bench-title" class="ns-h2">Other notes I keep nearby.</h2>
+        <div class="ns-goals">
+          {others.map((s) => (
+            <article class="ns-goal" id={s.id}>
+              <img class="ns-goal__img" src={s.image} alt="" width="480" height="300" />
+              <div>
+                <p class="ns-num">{s.name}</p>
+                <h3 class="ns-h3">{s.use}</h3>
+                <p>{s.body}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+        <p class="ns-after-grid"><a class="ns-link" href="/#goals">Back to the goals.</a></p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Base>

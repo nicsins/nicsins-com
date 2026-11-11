@@ -1,0 +1,19 @@
+---
+import Section from './Section.astro';
+import { goals } from '../data/content.js';
+---
+<Section id="goals" eyebrow="Aims" title="What we're aiming at.">
+  <p class="ns-lead">Not a manifesto. Four things I keep coming back to, with whoever is willing to work on them. If a better version shows up, this list should change.</p>
+  <ol class="ns-goals">
+    {goals.map((g) => (
+      <li class="ns-goal">
+        <img class="ns-goal__img" src={g.image} alt="" width="480" height="300" />
+        <div>
+          <p class="ns-num">{g.index}</p>
+          <h3 class="ns-h3">{g.title}</h3>
+          <p>{g.body}</p>
+        </div>
+      </li>
+    ))}
+  </ol>
+</Section>

@@ -3,5 +3,5 @@ import Section from './Section.astro';
 import { openSource } from '../data/content.js';
 ---
 <Section id="open-source" eyebrow="Open source" title="Read the code behind it"><div class="ns-grid">
-  {openSource.map((r) => <a class="ns-card" href={r.href}><h3 class="ns-h3 ns-mono">{r.name}</h3><p>{r.desc}</p><div class="ns-card__meta"><span>GitHub</span><span>↗</span></div></a>)}
+  {openSource.map((r) => <a class="ns-card" href={r.href} target="_blank" rel="noopener noreferrer"><h3 class="ns-h3 ns-mono">{r.name}</h3><p>{r.desc}</p><div class="ns-card__meta"><span>GitHub</span><span>↗</span></div></a>)}
 </div></Section>

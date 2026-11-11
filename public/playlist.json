@@ -1,0 +1,86 @@
+{
+  "_source": "Suno tracks from nicsins-com content.ts + six Grok-made self-hosted tracks from music-src/ (transcoded 128\u2013160 kbps MP3). Cover: believe-cover for Grace Got Me Singing; mint/graphite waveform covers for other self-hosted.",
+  "profile": "https://suno.com/@nicsins",
+  "tracks": [
+    {
+      "id": "56066409-d2c0-4219-bb07-c65300b5daac",
+      "title": "Grokzilla (Remix)",
+      "style": "Hip hop \u00b7 west coast \u00b7 jazz rap",
+      "time": "4:23",
+      "image": "/covers/grokzilla.jpg",
+      "embedUrl": "https://suno.com/embed/56066409-d2c0-4219-bb07-c65300b5daac",
+      "songUrl": "https://suno.com/song/56066409-d2c0-4219-bb07-c65300b5daac",
+      "src": null
+    },
+    {
+      "id": "2ba324de-f808-4f7e-8903-2c5ded7ec6b1",
+      "title": "New Gen Rise (Remastered)",
+      "style": "Zydeco \u00b7 dancehall \u00b7 dub",
+      "time": "3:15",
+      "image": "/covers/rise.jpg",
+      "embedUrl": "https://suno.com/embed/2ba324de-f808-4f7e-8903-2c5ded7ec6b1",
+      "songUrl": "https://suno.com/song/2ba324de-f808-4f7e-8903-2c5ded7ec6b1",
+      "src": null
+    },
+    {
+      "id": "bajo-oscuro",
+      "title": "Bajo Oscuro",
+      "style": "Dark bass \u00b7 latin \u00b7 night drive",
+      "time": "1:39",
+      "image": "/covers/bajo-oscuro.jpg",
+      "embedUrl": null,
+      "songUrl": null,
+      "src": "/music/bajo-oscuro.mp3"
+    },
+    {
+      "id": "grace-got-me-singing",
+      "title": "Grace Got Me Singing",
+      "style": "Soul \u00b7 gospel lift \u00b7 praise",
+      "time": "3:36",
+      "image": "/covers/believe-cover.jpg",
+      "embedUrl": null,
+      "songUrl": null,
+      "src": "/music/grace-got-me-singing.mp3"
+    },
+    {
+      "id": "the-grip",
+      "title": "The Grip",
+      "style": "Trap \u00b7 grip \u00b7 heavy pocket",
+      "time": "3:13",
+      "image": "/covers/the-grip.jpg",
+      "embedUrl": null,
+      "songUrl": null,
+      "src": "/music/the-grip.mp3"
+    },
+    {
+      "id": "we-dub-get-steppin",
+      "title": "WE DUB GET STEPPIN (1BODY TALK)",
+      "style": "Dub \u00b7 dancehall \u00b7 steppers",
+      "time": "3:47",
+      "image": "/covers/we-dub-get-steppin.jpg",
+      "embedUrl": null,
+      "songUrl": null,
+      "src": "/music/we-dub-get-steppin.mp3"
+    },
+    {
+      "id": "we-take-over",
+      "title": "WE TAKE OVER (Remastered Remix)",
+      "style": "Bass remix \u00b7 takeover",
+      "time": "4:53",
+      "image": "/covers/we-take-over.jpg",
+      "embedUrl": null,
+      "songUrl": null,
+      "src": "/music/we-take-over.mp3"
+    },
+    {
+      "id": "darkstep-heavy-bass-devilgrass",
+      "title": "Darkstep Heavy Bass Devilgrass",
+      "style": "Darkstep \u00b7 heavy bass \u00b7 devilgrass",
+      "time": "0:13",
+      "image": "/covers/darkstep-heavy-bass-devilgrass.jpg",
+      "embedUrl": null,
+      "songUrl": null,
+      "src": "/music/darkstep-heavy-bass-devilgrass.mp3"
+    }
+  ]
+}

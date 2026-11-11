@@ -1,10 +1,21 @@
-# nicsins.com
+# nicsins.com (design-integration preview)
 
-Astro static site. `npm install && npm run build` → `dist/`.
+Astro static site using the Game Art Director visual system, plus the curated site wheels and a compact music dock.
 
-- Content/links: `src/data/content.js` (Featured = only link-check 200s)
-- Components: `src/components/` (ResultsStrip, FeaturedLive, ClientServices, OpenSource, InDevelopment)
-- Styling hooks (Game Art Director): `src/styles/tokens.css` (GAD tokens + `.ns-*` components), `src/styles/theme.css` (layout helpers)
-- SEO hooks (Beacon): `src/data/site.js`, `src/seo/Seo.astro` (meta/OG + `<slot/>` and `head` slot), `src/seo/JsonLd.astro`, `src/pages/sitemap.xml.js`, `src/pages/robots.txt.js`
+This branch is a **preview only**. It is meant to be deployed as a new Cloudflare Worker named `nicsins-com-next` on workers.dev, with no custom domains and no routes. Do not deploy it to the existing `nicsins-com` Worker, and do not touch live DNS.
 
-Deploy (preview only): build, copy `dist` to `.vercel/output/static`, `vercel deploy --prebuilt`.
+```bash
+npm install
+npm run build
+# Preview worker (no routes, no custom domain):
+#   export CLOUDFLARE_API_TOKEN from the workers token file (never echo it)
+#   npx wrangler deploy
+```
+
+- Visual system: `src/styles/tokens.css`, `src/styles/theme.css`
+- Content: `src/data/content.js`, `src/data/about.js`, `src/data/workshop.js`
+- Showcase catalog: `public/sites.json` (finished sites only)
+- Workshop (collapsed, not the showcase): `src/data/workshop.js`
+- Curation evidence: `qa/candidates/` and `qa/CURATION.md`
+- SEO hooks: `src/data/site.js` (`indexable` is false on this preview), `src/pages/robots.txt.js`, `src/pages/sitemap.xml.js`
+- Discoverability files from main: `public/llms.txt`, `public/.well-known/security.txt`
