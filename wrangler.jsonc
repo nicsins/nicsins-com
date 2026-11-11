@@ -1,0 +1,18 @@
+{
+  // nicsins.com on Cloudflare Workers.
+  // PREVIEW ONLY: workers.dev subdomain. Do not add routes or custom domains
+  // until Nic gives a separate go for live DNS cutover. See CUTOVER.md.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nicsins-com",
+  "main": "src/server.ts",
+  "compatibility_date": "2026-11-11",
+  "workers_dev": true,
+  "observability": {
+    "enabled": true
+  },
+  // Canonical public host so OG image URLs stay https://nicsins.com/og.jpg
+  // on localhost and on the workers.dev preview. Not a secret.
+  "vars": {
+    "VITE_PUBLIC_HOSTNAME": "nicsins.com"
+  }
+}

@@ -260,8 +260,14 @@ export function readOgSite(cwd = process.cwd()) {
 
 /** Public path of an on-disk share card, or "" if neither file exists. */
 export function ogCardPublicPath(cwd = process.cwd()) {
-  if (existsSync(join(cwd, "public/og.jpg"))) return "/og.jpg";
-  if (existsSync(join(cwd, "public/og.png"))) return "/og.png";
+  // Vercel and Cloudflare Workers have no workspace filesystem. Stat
+  // failures must not break OG injection; the baked `site` snapshot wins.
+  try {
+    if (existsSync(join(cwd, "public/og.jpg"))) return "/og.jpg";
+    if (existsSync(join(cwd, "public/og.png"))) return "/og.png";
+  } catch {
+    return "";
+  }
   return "";
 }
 
@@ -283,8 +289,12 @@ export function snapshotOgIdentity(cwd = process.cwd()) {
     if (siteHasCustomCard(site)) delete site.card;
     if (site.image) delete site.image;
   }
-  if (existsSync(join(cwd, "public/x-banner.jpg"))) {
-    site.banner = site.banner || "/x-banner.jpg";
+  try {
+    if (existsSync(join(cwd, "public/x-banner.jpg"))) {
+      site.banner = site.banner || "/x-banner.jpg";
+    }
+  } catch {
+    // no workspace FS (Workers / Vercel)
   }
   return { site };
 }

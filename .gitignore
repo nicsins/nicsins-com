@@ -9,3 +9,7 @@ artifacts
 .env
 .env.*
 .DS_Store
+.wrangler
+.dev.vars
+.dev.vars.*
+!.dev.vars.example

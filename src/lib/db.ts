@@ -11,8 +11,8 @@ const databaseUrl =
   rawDatabaseUrl && rawDatabaseUrl.trim() ? rawDatabaseUrl : undefined;
 
 /**
- * Active backend: real **Neon** when `DATABASE_URL` is set (deployed / configured
- * sandbox), otherwise a local embedded **PGLite** (Postgres compiled to WASM) so
+ * Active backend: real **Neon** (HTTP/`@neondatabase/serverless`) when `DATABASE_URL`
+ * is set (deployed / configured sandbox), otherwise a local embedded **PGLite** (Postgres compiled to WASM) so
  * the app has a working database even with nothing configured — the live preview
  * included. Swap in Neon later by just setting `DATABASE_URL`; no code changes.
  */
@@ -87,16 +87,21 @@ function toSql(run: Run): Sql {
 
 function createNeonSql(): Promise<Sql> {
   globalRef.__pgSqlPromise__ ??= (async () => {
-    // Regular Postgres driver: node-postgres (`pg`) — works directly with Neon's
-    // pooled endpoint. One pool per process; warm serverless instances reuse it.
-    const { Pool, types } = await import("pg");
-    types.setTypeParser(OID_INT8, Number);
-    types.setTypeParser(OID_DATE, identity);
-    types.setTypeParser(OID_INTERVAL, identity);
-    const pool = new Pool({ connectionString: databaseUrl });
+    // Fetch-compatible Neon driver (HTTP). `pg` uses TCP sockets, which
+    // Workers cannot open. The SQL surface stays the same; migrate.mjs still
+    // uses `pg` because it runs in Node, not in the Worker.
+    const { neon, neonConfig } = await import("@neondatabase/serverless");
+    neonConfig.fetchFunction = fetch;
+    const sql = neon(databaseUrl as string);
     return toSql(async <T>(text: string, params: unknown[]) => {
-      const res = await pool.query(text, params);
-      return res.rows as T[];
+      const rows = (await sql.query(text, params)) as T[];
+      return rows.map((row) => {
+        const out: Record<string, unknown> = { ...(row as Record<string, unknown>) };
+        for (const [key, value] of Object.entries(out)) {
+          if (typeof value === "bigint") out[key] = Number(value);
+        }
+        return out as T;
+      });
     });
   })().catch((err) => {
     globalRef.__pgSqlPromise__ = undefined;

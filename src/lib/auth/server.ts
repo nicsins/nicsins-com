@@ -34,7 +34,7 @@ import { bearer, genericOAuth } from "better-auth/plugins";
 import { tanstackStartCookies } from "better-auth/tanstack-start";
 import { getCookie } from "@tanstack/react-start/server";
 import { randomBytes } from "node:crypto";
-import { Pool } from "pg";
+import { Pool, neonConfig } from "@neondatabase/serverless";
 import { ensureDbReady, getPglite } from "../db";
 import { emailAndPasswordEnabled } from "./email-password";
 import { GATE_PROVIDER_ID, gateIdentitySessions } from "./gate-session.server";
@@ -49,6 +49,14 @@ import {
 
 // Kick (and share) PGLite bootstrap as soon as the auth server module loads.
 void ensureDbReady();
+
+// Workers have no outbound TCP. Use Neon HTTP for the same Pool surface
+// Better Auth expected from `pg` on Vercel.
+neonConfig.poolQueryViaFetch = true;
+if (typeof WebSocket !== "undefined") {
+  neonConfig.webSocketConstructor = WebSocket;
+}
+
 
 /**
  * Preview secret must outlive module reloads: PGLite (and its session rows) is

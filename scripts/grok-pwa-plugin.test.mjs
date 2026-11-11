@@ -515,13 +515,17 @@ test("renders the manifest with the per-app name", () => {
   assert.equal(manifest.icons[0].src, "/__grok/icon-180.png");
 });
 
-// Tripwires: the deployed-app path only works if Nitro scans server/ — an
-// accidental edit that drops serverDir or the middleware file would otherwise
-// fail silently (published apps would just render the app for ?install=1).
-test("vite config keeps the nitro serverDir wiring", () => {
+// Tripwires: the deployed-app path only works if the Worker entry wraps
+// TanStack Start with the Grok PWA middleware (Nitro used to auto-register
+// server/ via serverDir). Dropping that would silently skip ?install=1.
+test("vite config and worker entry keep the Grok PWA wiring", () => {
   const viteConfig = readFileSync(join(TEMPLATE_ROOT, "vite.config.ts"), "utf8");
-  assert.match(viteConfig, /serverDir:\s*"\.\/server"/);
+  assert.match(viteConfig, /cloudflare\(\{\s*viteEnvironment:\s*\{\s*name:\s*"ssr"/);
   assert.match(viteConfig, /grokPwaPlugin\(\)/);
+  assert.doesNotMatch(viteConfig, /nitro\(/);
+  const entry = readFileSync(join(TEMPLATE_ROOT, "src/server.ts"), "utf8");
+  assert.match(entry, /grokPwaMiddleware/);
+  assert.match(entry, /@tanstack\/react-start\/server-entry/);
 });
 
 test("nitro middleware and its bundled assets exist", () => {
