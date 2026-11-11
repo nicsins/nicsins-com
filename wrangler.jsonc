@@ -1,12 +1,18 @@
 {
-  // PREVIEW ONLY. New worker, workers.dev, no routes, no custom domains.
-  // Do not deploy to the existing nicsins-com worker.
+  // PRODUCTION Worker for nicsins.com (Astro redesign, branch design-integration).
+  // Nic approved go-live Nov 11 2026 12:32 PM CT. See CUTOVER-ROLLBACK.md.
+  // workers.dev stays on (noindex via worker/index.js) for side-by-side checks.
+  // Custom domains nicsins.com + www.nicsins.com are attached via the API, not here,
+  // so a plain `wrangler deploy` never touches DNS.
   "name": "nicsins-com-next",
+  "main": "worker/index.js",
   "compatibility_date": "2026-11-11",
   "workers_dev": true,
   "preview_urls": true,
   "assets": {
     "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": true,
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
   }
