@@ -502,7 +502,7 @@ watch(() => props.tracks, (list) => {
       </div>
 
       <p class="mp__credit">
-        The first three tracks are the default instrumental bed from
+        The first two tracks are the default instrumental bed from
         <a :href="profile" target="_blank" rel="noopener noreferrer">suno.com/@nicsins</a>.
         They start on your first click and loop unless you pick another title.
       </p>

@@ -1,5 +1,5 @@
 {
-  "_source": "Default bed: three Nic Suno tracks (share links OOIhXO5VUIx4XkEq, MJRfZLpPKjCFrSQ2, 3iQRkA8h8shHiefm), played from official Suno video_url AAC/mp4 streams (audio_url is forbidden; m4a-opus media_urls are not valid containers). Then existing Suno embeds (Grokzilla, New Gen Rise) and six self-hosted Grok-made tracks.",
+  "_source": "Default bed: two Nic Suno tracks (share links OOIhXO5VUIx4XkEq, MJRfZLpPKjCFrSQ2), played from official Suno video_url AAC/mp4 streams (audio_url is forbidden; m4a-opus media_urls are not valid containers). Then existing Suno embeds (Grokzilla, New Gen Rise) and six self-hosted Grok-made tracks.",
   "profile": "https://suno.com/@nicsins",
   "tracks": [
     {
@@ -22,17 +22,6 @@
       "embedUrl": "https://suno.com/embed/be051e73-3a3c-4439-838f-ffe27e2d2058",
       "songUrl": "https://suno.com/song/be051e73-3a3c-4439-838f-ffe27e2d2058",
       "src": "https://cdn1.suno.ai/be051e73-3a3c-4439-838f-ffe27e2d2058.mp4",
-      "background": true
-    },
-    {
-      "id": "55058779-206d-42a2-9172-312dd17f1557",
-      "title": "Half-Time Groove x zydeco alligator shuffle (Mashup)",
-      "style": "Deep house · two-step · ambient",
-      "time": "3:54",
-      "image": "https://cdn2.suno.ai/image_55058779-206d-42a2-9172-312dd17f1557.jpeg",
-      "embedUrl": "https://suno.com/embed/55058779-206d-42a2-9172-312dd17f1557",
-      "songUrl": "https://suno.com/song/55058779-206d-42a2-9172-312dd17f1557",
-      "src": "https://cdn1.suno.ai/55058779-206d-42a2-9172-312dd17f1557.mp4",
       "background": true
     },
     {
