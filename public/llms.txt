@@ -1,0 +1,22 @@
+# nicsins
+
+> Nic Beltrante (nicsins). I build from Minneapolis. Useful beats impressive: a place a town can copy, paperwork that finishes, and small tools that tell the truth.
+
+This file is the machine-readable summary of https://nicsins.com/. Contact: mailto:nicsins@gmail.com
+
+## Site
+
+- [Home](https://nicsins.com/): goals, field record, and contact
+- [Sites](https://nicsins.com/sites): live doors that still answer — games, the shop, and small tools
+- [Creator of All](https://nicsins.com/creator-of-all): a working note on finishing a thing
+
+## Projects
+
+- [Harbinger](https://www.x403-harbinger.com): agent-ready watches and paid signals
+- [Grokzilla Shop](https://grokzilla.shop): small agent skills, paid per step
+- [x402 Micro Pay](https://x402-micro-pay.com): pay for the call, not the speech
+
+## Optional
+
+- [Sitemap](https://nicsins.com/sitemap.xml)
+- [Security contact](https://nicsins.com/.well-known/security.txt)
