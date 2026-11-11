@@ -19,10 +19,10 @@ export const about = {
         { text: 'I translated for Secretary of Defense William Perry and the Minister of Defense of the Russian Federation, and for multiple Russian delegation envoys in the U.S.' },
       ],
       [
-        { text: 'In Operation Uphold Democracy in Haiti, I helped shut down the resistance in under 7 hours.' },
+        { text: 'In Operation Uphold Democracy in Haiti, I was part of a small, innovative HUMINT team that shut down the insurgency in under 7 hours. We pushed the limits of modern human-intelligence collection without ever crossing the legal and ethical lines that set our country apart from its adversaries.' },
         { text: "I was the first person to send a data burst over SINCGARS, the Army's frequency-hopping encrypted radio." },
         { text: 'I was a 97E, a human-intelligence collector. The work was people, and writing it down so the next person did not have to learn it the hard way.' },
-        { text: 'Reports from that tour went to the Library of Congress. The unit received a Meritorious Unit Citation.' },
+        { text: 'The methods we built became doctrine for the collectors who came after us. Reports from that tour went to the Library of Congress, and our unit received the Joint Meritorious Unit Award. We were recognized as the first HUMINT element to turn out highly effective intelligence in record time, saving lives on all sides and earning a reputation for getting the truth without ever resorting to methods banned under international law.' },
         { text: 'I received a Humanitarian Service Medal, an Army Commendation Medal, two Army Achievement Medals, and an Armed Forces Expeditionary Medal.' },
         { text: 'Later I worked with a Psychological Operations reserve unit in Minneapolis on all aspects of training and analysis support.' },
         { text: '[CONFIRM: years of service]', confirm: true },
